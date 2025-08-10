@@ -40,7 +40,16 @@ Insight 4: Shipping methods with longer delivery often have lower margins—sugg
 If available, include a short GIF or video (e.g. `interactivity_preview.gif`) demonstrating dashboard filtering and interactions.
 
 ## notes.txt
-See below.
+Data Cleaning & Assumptions:
+
+- Removed any orders with missing Sales or Profit values.
+- Converted 'Order Date' and 'Ship Date' to date format.
+- Calculated 'Shipping Days' using difference between Ship and Order dates.
+- Profit Margin calculated only where Sales > 0 to avoid division by zero.
+- Aggregations assume no duplicate Order IDs; duplicates were dropped.
+- Some cities with small sample size were retained but can be grouped under "Other" if needed.
+- Year/Month filters default to include all data from 2019–2022.
+
 
 ## Acknowledgments & References
 - Built using  Power BI
